@@ -5,7 +5,9 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class BackendServiceService {
 
-  constructor(public http:Http) { }
+  constructor(public http:Http) { 
+    
+  }
 
   rssLink:string = "https://api.rss2json.com/v1/api.json?rss_url=http://rss.cnn.com/rss/edition.rss";
 

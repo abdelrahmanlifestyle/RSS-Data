@@ -1,8 +1,8 @@
 <div class="row" style="height: 24px;">
   <ul>
-    <li *ngFor=" let item of rssData; let i=index;">
+    <li *ngFor=" let item of showedRssData; let i=index;">
       <div class="col-xs-4">
-        <img [src]=item.enclosure.link alt={{item.title}}/>
+        <img [src]=item.enclosure.link [alt]=item.title/>
         <p> {{i}}</p>
         <p class="carousel-caption">{{item.title}}</p>
         <p class="carousel-caption">{{item.pubDate}}</p>
@@ -11,5 +11,5 @@
   </ul>
 </div>
 <div>
-  <button class="btn btn-default">view more</button>
+  <button class="btn btn-default" (click)="onViewMore()">view more</button>
 </div>
