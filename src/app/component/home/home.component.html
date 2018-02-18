@@ -1,16 +1,15 @@
-<ul>
-  <li  *ngFor="let item of rssData">
-    <div class="row">
-      <div class="col-xs-12">
-        <img [src]= item.enclosure.link alt = {{item.title}}
-        />
-        <p>{{item.title}}</p>
-        <p>{{item.pubDate}}</p>
+<div class="row" style="height: 24px;">
+  <ul>
+    <li *ngFor=" let item of rssData; let i=index;">
+      <div class="col-xs-4">
+        <img [src]=item.enclosure.link alt={{item.title}}/>
+        <p> {{i}}</p>
+        <p class="carousel-caption">{{item.title}}</p>
+        <p class="carousel-caption">{{item.pubDate}}</p>
       </div>
-    </div>
-  </li>
-</ul>
-
+    </li>
+  </ul>
+</div>
 <div>
   <button class="btn btn-default">view more</button>
 </div>
