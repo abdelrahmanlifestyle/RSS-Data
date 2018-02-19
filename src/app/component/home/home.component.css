@@ -52,3 +52,17 @@ ul{
     height: 308px;
     padding: 6px 6px 6px 6px;
 }
+
+.footer {
+    margin: 69px auto 90px auto; 
+    bottom: 0;
+}
+
+.view-more-button{
+    width: 163px;
+    height: 33px;
+    font-size:15px;
+    border: solid black;
+    text-align: center;
+    vertical-align: middle;
+}
