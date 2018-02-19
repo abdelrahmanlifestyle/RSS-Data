@@ -1,14 +1,12 @@
-<div class="row" style="height: 24px;">
-  <ul>
-    <li *ngFor=" let item of showedRssData; let i=index;">
-      <div class="col-xs-4">
-        <img [src]=item.enclosure.link [alt]=item.title/>
-        <p> {{i}}</p>
-        <p class="carousel-caption">{{item.title}}</p>
-        <p class="carousel-caption">{{item.pubDate}}</p>
-      </div>
-    </li>
-  </ul>
+<div class="container">
+  <p class="headerParagraph">CNN.com - RSS Channel - App International Edition</p>
+  <div class="row">
+    <div *ngFor=" let item of showedRssData; let i=index;" class="single-element col-xs-12 col-sm-6" [ngClass]="(i === this.doubleWidthIndex[i]) ? 'col-md-8': 'col-md-4'">
+      <img [src]=item.enclosure.link [alt]=item.title class="centered-block"/>
+      <p class="title carousel-caption">{{item.title}}</p>
+      <p class="date carousel-caption">{{item.pubDate}}</p>
+    </div>
+  </div>
 </div>
 <div>
   <button class="btn btn-default" (click)="onViewMore()">view more</button>
