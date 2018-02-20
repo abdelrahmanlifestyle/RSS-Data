@@ -3,10 +3,6 @@ img{
     height: 100%;
     object-fit: cover;  
 }
-ul{
-    list-style-type: none;
-    padding-left: 0%;
-}
 
 .title{
     text-align: left;
@@ -20,7 +16,7 @@ ul{
     overflow:  hidden;
     text-overflow: ellipsis;
     margin: 0;
-    padding-bottom: 47px; 
+    padding-bottom: 46px; 
 }
 
 .date{
@@ -50,7 +46,7 @@ ul{
 
 .single-element{
     height: 308px;
-    padding: 6px 6px 6px 6px;
+    padding: 5px 5px 5px 5px;
 }
 
 .footer {
@@ -59,10 +55,15 @@ ul{
 }
 
 .view-more-button{
-    width: 163px;
-    height: 33px;
+    width: 159px;
+    height: 32px;
     font-size:15px;
-    border: solid black;
+    border: solid rgb(72,72,72) 3px;
+    text-align: center;
+    color: rgb(72,72,72);
+    font-family: "I TC Avant Garde Pro";
     text-align: center;
     vertical-align: middle;
+    border-radius: 0;
+    padding-top: 3px;
 }
