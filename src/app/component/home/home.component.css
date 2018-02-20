@@ -1,14 +1,16 @@
 .headerParagraph{
     font-size: 25px;
+    font-weight: bold;
     color: rgb(72,72,72);
     font-family: "I TC Avant Garde Pro";
     text-align: left;
     margin-top: 85px;
+    word-spacing: 9px;
 }
 
 .yellow-container{
-    margin-top:11px;
-    margin-bottom:28px;
+    margin-top:3px;
+    margin-bottom:22px;
     width: 61px;
     height: 3px;
     background-color: yellow;
