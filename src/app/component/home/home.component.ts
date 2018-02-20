@@ -19,9 +19,11 @@ export class HomeComponent implements OnInit {
     this.rssData = rssData.items;
       this.showedRssData = this.rssData.slice(0,7);
     });
+    // debugger;
   }
 
   ngOnInit() {
+    
   }
 
   onViewMore(){
