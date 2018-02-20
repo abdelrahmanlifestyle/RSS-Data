@@ -9,32 +9,37 @@ import { BackendServiceService } from '../../service/backend-service.service';
 
 export class HomeComponent implements OnInit {
 
-  rssData:any = [];
-  showedRssData:any = [];
-  nummberOfClicks:number = 1;
-  doublicatedWidthIndex:[number] = [0,6];
+  rssData: any = [];
+  showedRssData: any = [];
+  nummberOfClicksOnViewMore: number = 1;
+  doublicatedWidthIndexArray: [number] = [0, 6];
 
   constructor(public serviceData: BackendServiceService) {
     this.serviceData.getRssData().subscribe(rssData => {
-    this.rssData = rssData.items;
-      this.showedRssData = this.rssData.slice(0,7);
+      this.rssData = rssData.items;
+      this.showedRssData = this.rssData.slice(0, 7);
     });
-    // debugger;
   }
 
   ngOnInit() {
-    
+
   }
 
-  onViewMore(){
-    this.doublicatedWidthIndex.push(7*this.nummberOfClicks);
-    this.nummberOfClicks++;
-    this.doublicatedWidthIndex.push(7*this.nummberOfClicks-1);
-    this.showedRssData = this.rssData.slice(0 , 7*this.nummberOfClicks);
+  onViewMore() {
+    this.nummberOfClicksOnViewMore++;
+    if (this.rssData.length > 7 * this.nummberOfClicksOnViewMore) {
+      this.doublicatedWidthIndexArray.push(7 * (this.nummberOfClicksOnViewMore - 1));
+      this.doublicatedWidthIndexArray.push(7 * this.nummberOfClicksOnViewMore - 1);
+      this.showedRssData = this.rssData.slice(0, 7 * this.nummberOfClicksOnViewMore);
+    } else {
+      debugger;
+      this.nummberOfClicksOnViewMore++;
+      this.showedRssData = this.rssData.slice(0, 7 * this.nummberOfClicksOnViewMore);
+    }
   }
 
-  doublicatedIndexChecker(index){
-    return (this.doublicatedWidthIndex.indexOf(index)>=0);
+  doublicatedIndexChecker(index) {
+    return (this.doublicatedWidthIndexArray.indexOf(index) >= 0);
   }
 
 }
