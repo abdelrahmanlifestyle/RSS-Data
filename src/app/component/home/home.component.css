@@ -67,3 +67,10 @@ img{
     border-radius: 0;
     padding-top: 3px;
 }
+.container{
+    min-height: 1054.450px;
+}
+.yellow-container{
+    width: 61px;
+    height: 3px;
+}
