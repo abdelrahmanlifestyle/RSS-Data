@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
       this.doublicatedWidthIndexArray.push(7 * this.nummberOfClicksOnViewMore - 1);
       this.showedRssData = this.rssData.slice(0, 7 * this.nummberOfClicksOnViewMore);
     } else {
-      debugger;
       this.nummberOfClicksOnViewMore++;
       this.showedRssData = this.rssData.slice(0, 7 * this.nummberOfClicksOnViewMore);
     }
@@ -40,6 +39,10 @@ export class HomeComponent implements OnInit {
 
   doublicatedIndexChecker(index) {
     return (this.doublicatedWidthIndexArray.indexOf(index) >= 0);
+  }
+
+  moreElementsChecker(){
+    return (this.showedRssData.length !== 0 && this.showedRssData.length < this.rssData.length);
   }
 
 }

@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <div class="footer" *ngIf="this.showedRssData.length !== 0">
-    <button class="view-more-button btn btn-default" (click)="onViewMore()">VIEW MORE</button>
+  <div class="footer">
+    <button class="view-more-button btn btn-default" (click)="onViewMore()" *ngIf="this.moreElementsChecker()">VIEW MORE</button>
   </div>
 </div>
