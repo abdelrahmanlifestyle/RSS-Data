@@ -1,0 +1,17 @@
+.footer {
+    margin: 60px auto 91px auto; 
+    bottom: 0;
+}
+
+.view-more-button{
+    width: 165px;
+    height: 38px;
+    font-size:15px;
+    border: solid rgb(72,72,72) 3px;
+    text-align: center;
+    color: rgb(72,72,72);
+    font-family: "I TC Avant Garde Pro";
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 0;
+}
