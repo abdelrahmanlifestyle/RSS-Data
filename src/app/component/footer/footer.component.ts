@@ -7,8 +7,8 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  @Output() clickedAction=new EventEmitter<boolean>();
-  @Input() moreItemsChecher: Boolean;
+  @Output() clickedAction = new EventEmitter<boolean>();
+  @Input() moreItemsChecher;
   
   constructor() { }
 
@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit {
   }
 
   myFunction(){
-    this.clickedAction.emit(true);
+    this.clickedAction.emit();
   }
 
 }
